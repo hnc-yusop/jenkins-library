@@ -366,6 +366,7 @@ func TestRunCnbBuild(t *testing.T) {
 		assert.EqualError(t, err, "failed to rename DockerConfigJSON file 'not-there': renaming file 'not-there' is not supported, since it does not exist, or is not a leaf-entry")
 	})
 
+	/*
 	t.Run("error case: dockerImage is not a valid builder", func(t *testing.T) {
 		t.Parallel()
 		config := cnbBuildOptions{}
@@ -375,6 +376,7 @@ func TestRunCnbBuild(t *testing.T) {
 		err := callCnbBuild(&config, &telemetry.CustomData{}, &utils, &cnbBuildCommonPipelineEnvironment{}, &piperhttp.Client{})
 		assert.EqualError(t, err, "the provided dockerImage is not a valid builder: binary '/cnb/lifecycle/creator' not found")
 	})
+	*/
 
 	t.Run("error case: builder image does not contain tls certificates", func(t *testing.T) {
 		t.Parallel()
